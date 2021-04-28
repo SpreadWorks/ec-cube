@@ -41,3 +41,7 @@ if [ ! -f html/.htaccess ]; then
 	cp .htaccess html/
 fi
 
+git add .
+git commit -m 'customized'
+git push origin
+
