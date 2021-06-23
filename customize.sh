@@ -12,6 +12,10 @@ if ! grep -q 'composer.lock' .gitignore; then
 	echo 'composer.lock' >> .gitignore
 fi
 
+if ! grep -q 'app/Customize' .gitignore; then
+	echo 'app/Customize' >> .gitignore
+fi
+
 # composer関連のファイルを削除
 git rm composer.json
 git rm composer.lock
