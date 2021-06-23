@@ -42,9 +42,9 @@ if [ ! -f html/index.php ]; then
 	echo '<?php require_once "../index.php";' > html/index.php
 fi
 
-if [ ! -f html/.htaccess ]; then
-	cp .htaccess html/
-fi
+#if [ ! -f html/.htaccess ]; then
+#	cp .htaccess html/
+#fi
 
 #git add .
 #git commit -m 'customized'
