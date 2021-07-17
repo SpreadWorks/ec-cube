@@ -30,7 +30,7 @@ class CustomerProvider implements UserProviderInterface
 
     public function __construct(CustomerRepository $customerRepository)
     {
-        return Customer::class === $class || is_subclass_of($class, Customer::class);
+        $this->customerRepository = $customerRepository;
     }
 
     /**
@@ -89,6 +89,6 @@ class CustomerProvider implements UserProviderInterface
      */
     public function supportsClass($class)
     {
-        return Customer::class === $class;
+        return Customer::class === $class || is_subclass_of($class, Customer::class);
     }
 }
